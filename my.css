@@ -1,0 +1,19 @@
+body {
+	margin: 20px;
+}
+
+ul#file-contents {
+	list-style: none;
+}
+
+ul#file-contents input {
+	border-width: 0px;
+	width: 1000px;
+	padding: 0px;
+	margin: 0px
+}
+
+ul#file-contents li {
+	padding: 0px;
+	margin: 0px
+}

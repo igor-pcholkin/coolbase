@@ -1,0 +1,25 @@
+<input type="text" ng-model="search" class="search-query" placeholder="Search">
+<table>
+	<thead>
+		<tr>
+			<th>File</th>
+			<th>Contents</th>
+			<th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="file in files | filter:search | orderBy:'name'">
+			<!-- <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
+			<td>{{project.description}}</td> -->
+			<td>{{file.name}}</td>
+			<td></td>
+			<td><a href="#/edit/{{file.$id}}"><i class="icon-pencil"></i></a></td>
+		</tr>
+
+	</tbody>
+</table>
+<ul id="file-contents">
+	<li ng-repeat="line in lines | orderBy:'i'">
+		<input type="text" ng-model="line.v" ng-click="onLineFocus($index)" ng-change="onLineChange(line, $index)" name="{{'line_' + $index}}">
+	</li>
+</ul>
